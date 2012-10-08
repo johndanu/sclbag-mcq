@@ -8,7 +8,7 @@ import { IInstitute } from './models/institute';
   providedIn: 'root'
 })
 export class ConfigService {
-  configUrl = '/api'
+  configUrl = 'http://localhost:9000'
 
   constructor(private http:HttpClient) { }
 
@@ -18,5 +18,9 @@ export class ConfigService {
 
   getInstitutes():Observable<IInstitute[]>{
     return this.http.get<IInstitute[]>(this.configUrl+'/institute')
+  }
+
+  getInstituteByID(id:string):Observable<IInstitute>{
+    return this.http.get<IInstitute>(this.configUrl+'/'+id)
   }
 }

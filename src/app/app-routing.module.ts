@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomeComponent } from './Home/home.component';
 import { InstituteComponent } from './Home/institute/institute.component';
 import { LandingPageComponent } from './Home/landing-page/landing-page.component';
@@ -9,14 +10,15 @@ import { QuizService } from './Quiz/quiz.service';
 import { QuizComponent } from './Quiz/quiz/quiz.component';
 import { ResultService } from './Quiz/result.service';
 import { ResultComponent } from './Quiz/result/result.component';
+import { SponsorsComponent } from './sponsors/sponsors.component';
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-    children:[
-      {path:'',component:LandingPageComponent},
-      {path:'institutes', component:InstituteComponent}
+    children: [
+      { path: '', component: LandingPageComponent },
+      { path: 'institutes', component: InstituteComponent }
     ]
   },
   {
@@ -27,7 +29,18 @@ const routes: Routes = [
     path: 'quiz',
     component: QuizComponent,
     canActivate: [QuizService]
-  }, {
+  },
+  {
+    path: 'contact-us',
+    component: ContactUsComponent
+  }
+  ,
+  {
+    path: 'sponsors',
+    component: SponsorsComponent
+  }
+  ,
+  {
     path: "**",
     component: PageNotFoundComponent
   }

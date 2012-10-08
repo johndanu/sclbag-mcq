@@ -19,6 +19,9 @@ import { HomeComponent } from './Home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LandingPageComponent } from './Home/landing-page/landing-page.component';
 import { LoaderComponent } from './BasicComponents/loader/loader.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { SponsorsListComponent } from './Sponsors/sponsors-list/sponsors-list.component';
+import { SponsorsComponent } from './sponsors/sponsors.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { LoaderComponent } from './BasicComponents/loader/loader.component';
     InstituteComponent,
     PageNotFoundComponent,
     LandingPageComponent,
-    LoaderComponent
+    LoaderComponent,
+    ContactUsComponent,
+    SponsorsListComponent,
+    SponsorsComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +46,7 @@ import { LoaderComponent } from './BasicComponents/loader/loader.component';
     ToastrModule.forRoot()
   ],
   providers: [
-    //InstituteService,
+    InstituteService,
     QuizService,
     ResultService
   ],

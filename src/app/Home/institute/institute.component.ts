@@ -14,24 +14,31 @@ export class InstituteComponent implements OnInit {
 
   public showLoader = true;
   public institutes;
-  constructor( private service_institute: InstituteService, 
-    private _quizService:QuizService,
-    private router:Router , private configService: ConfigService 
-    ) { }
+  constructor(private service_institute: InstituteService,
+    private _quizService: QuizService,
+    private router: Router, private configService: ConfigService
+  ) { }
 
   ngOnInit(): void {
-     this.configService.getInstitutes()
-    .subscribe(data => {
-      this.institutes = data
-    this.showLoader = false
-  })
+    this.configService.getInstitutes()
+      .subscribe(data => {
+        this.institutes = data
+        this.showLoader = false
+      })
   }
 
 
-  OnClick(id,exam){
-    console.log(id+exam);
-    
-    this._quizService.FilterQuiz(id,exam);
+  OnClick(id, exam) {
+
+    this._quizService.FilterQuiz(id, exam);
     this.router.navigate(['quiz'])
+  }
+
+  GetInstituteByID(id) {
+    let institute;
+    this.configService.getInstituteByID(id).subscribe(data => {
+      institute = data
+    });
+    return institute
   }
 }

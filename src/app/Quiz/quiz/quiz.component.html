@@ -1,7 +1,14 @@
-<div class=" bg-primary z-depth-2 p-3">
-    <div>
-        <div class="jumbotron light-blue lighten-5 rounded-top">
-            <p class="text-center p-2 h2" >{{i+1}}. <span [innerHTML]="sampleQuiz.Questions[i].Question"></span></p>
+<div class=" theme z-depth-2 p-3">
+    
+    <div class="jumbotron light-blue lighten-5 rounded-top text-theme" *ngIf="sampleQuiz.Questions.length==0">
+        <p class="h2 text-center"><b>Sorry for the inconvenience</b></p>
+        <p class="text-center p-2 h2" >We will upload it soon..</p>
+    </div>
+    
+    
+    <div  *ngIf="sampleQuiz.Questions.length!=0">
+        <div class="jumbotron light-blue lighten-5 rounded-top text-theme">
+            <p class="text-center p-2 h4" >{{i+1}}. <span [innerHTML]="sampleQuiz.Questions[i].Question"></span></p>
         </div>
         <div class="row text-center">
             <div *ngFor="let answers of sampleQuiz.Questions[i].Answers; let g=index;" class="col-12 col-lg-6 col-md-6"

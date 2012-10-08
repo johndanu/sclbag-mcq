@@ -9,13 +9,15 @@ import { ResultService } from '../result.service';
 export class ResultComponent implements OnInit {
 
   public TotalQuestions:number;
-  public TotalMarks:number
+  public TotalMarks:number;
+  public percentage:number;
 
   constructor(private resultService:ResultService) { }
 
   ngOnInit(): void {
     this.TotalMarks = this.resultService.correctAnswers
     this.TotalQuestions=this.resultService.totalQuestions
+    this.percentage = Math.round((this.TotalMarks/this.TotalQuestions)*100)
   }
 
 

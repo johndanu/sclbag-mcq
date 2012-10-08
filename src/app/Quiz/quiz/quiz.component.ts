@@ -13,40 +13,42 @@ export class QuizComponent implements OnInit {
 
   public totalQuiz;
   public sampleQuiz
-  public i:number;
+  public i: number;
   public lastQuestion: boolean = false;
+  public hi = true
+
   constructor(
-    public quizService: QuizService, 
-    private router:Router,
-    private resultService:ResultService, 
+    public quizService: QuizService,
+    private router: Router,
+    private resultService: ResultService,
     private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.sampleQuiz = this.quizService.SampleQuiz
     this.i = 0;
-    this.resultService.correctAnswers =0;
+    this.resultService.correctAnswers = 0;
     this.resultService.totalQuestions = 0;
     // this.totalQuiz = Array(this.quizService.SampleQuiz.Questions.length)
-    
+
   }
 
-  Add() { 
+  Add() {
     this.i = this.i + 1;
-    if (this.i < this.sampleQuiz.Questions.length-1) {
+    if (this.i < this.sampleQuiz.Questions.length - 1) {
       this.lastQuestion = false;
     } else {
       this.lastQuestion = true
       this.resultService.examAttended = true
     }
-    
+
   };
-  AnswerSelected(a,b){
-    this.resultService.CheckAnswer(a,b)
+  AnswerSelected(a, b) {
+    this.resultService.CheckAnswer(a, b)
     if (!this.lastQuestion) {
       this.Add()
-    }else{
+    } else {
       this.router.navigate(['my-result'])
     }
-    
+
   }
 }
