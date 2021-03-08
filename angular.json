@@ -24,7 +24,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": []
           },
@@ -119,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "SchoolBagQuiz"
+    }
+  },
+  "defaultProject": "SchoolBagQuiz",
+  "cli": {
+    "analytics": "b15e9189-dc52-4db5-a2f8-f7242f276622"
+  }
 }

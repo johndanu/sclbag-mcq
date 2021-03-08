@@ -1,0 +1,41 @@
+{
+    "InstituteName":"Zone",
+    "InstituteID":"Zon12",
+    "Subject":"Tamil",
+    "SubjectId":"Sub18",
+    "QuizID":"qui0001",
+    "Questions":[
+        {
+            "Question":"What is capital of SriLanka",
+            "Answer1":"Jaffna",
+            "Answer2":"Trinco",
+            "Answer3":"Colombo",
+            "Answer4":"Anuradhapura",
+            "CorrectAnswer":3
+        },
+        {
+            "Question":"Who is the president of Srilanka",
+            "Answer1":"Trump",
+            "Answer2":"Seylon",
+            "Answer3":"Mahinda",
+            "Answer4":"Godapaya",
+            "CorrectAnswer":4
+        },
+        {
+            "Question":"Where is Nallur located",
+            "Answer1":"Jaffna",
+            "Answer2":"Trinco",
+            "Answer3":"Colombo",
+            "Answer4":"Anuradhapura",
+            "CorrectAnswer":1
+        },
+        {
+            "Question":"When did SriLanka got independant",
+            "Answer1":"1995",
+            "Answer2":"2004",
+            "Answer3":"2005",
+            "Answer4":"1948",
+            "CorrectAnswer":4
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/SchoolBagQuiz",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

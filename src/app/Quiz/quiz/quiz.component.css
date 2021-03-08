@@ -1,0 +1,22 @@
+.answer{
+    background-color: rgb(198, 220, 241);
+    /* border-radius: 20px; */
+    color: rgb(2, 43, 56);
+    padding: 3px;
+    margin: 3px;
+    cursor: pointer;
+    word-wrap: break-word;
+    user-select:none;
+}
+.answer:hover{
+    color: rgb(198, 220, 241);
+    background-color: rgb(2, 43, 56);
+}
+.answer:active{
+    color: rgb(4, 11, 119);
+    background-color: rgb(189, 168, 188);
+}
+.answer-check{
+    width: 40px;
+    height: 40px;
+}
