@@ -26,8 +26,7 @@ export class QuizComponent implements OnInit {
     this.i = 0;
     this.resultService.correctAnswers =0;
     this.resultService.totalQuestions = 0;
-    this.totalQuiz = Array(this.quizService.SampleQuiz.Questions.length)
-    console.log(this.totalQuiz.length);
+    // this.totalQuiz = Array(this.quizService.SampleQuiz.Questions.length)
     
   }
 

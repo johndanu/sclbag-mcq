@@ -4,6 +4,7 @@
     "Subject":"Tamil",
     "SubjectId":"Sub18",
     "QuizID":"qui0001",
+    "QuizName": "This is a sample quiz",
     "Questions":[
         {
             "Question":"What is capital of SriLanka",
