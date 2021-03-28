@@ -8,7 +8,7 @@ import { IInstitute } from './models/institute';
   providedIn: 'root'
 })
 export class ConfigService {
-  configUrl = 'http://localhost:9000'
+  configUrl = '/api'
 
   constructor(private http:HttpClient) { }
 
