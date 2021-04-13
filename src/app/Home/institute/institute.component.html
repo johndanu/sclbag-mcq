@@ -1,6 +1,5 @@
-<h1>
 
-</h1>
+<app-loader *ngIf= 'showLoader' class="text-center"></app-loader>
 <div class=" row">
     <div class="card m-2 col-sm-12" *ngFor="let institute of institutes">
         <div class="row">
@@ -18,14 +17,14 @@
             <div class="card-body col-8">
 
                 <!-- Title -->
-                <h4 class="card-title">{{institute.Name}}</h4>
+                <h4 class="card-title">{{institute.name}}</h4>
                 <!-- Text -->
-                <p class="card-text">{{institute.About}}</p>
+                <p class="card-text">{{institute.city}}</p>
                 <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
                 
                 <div class="row">
-                    <span *ngFor="let exam of institute.Exam">
-                        <button type="button" class="btn indigo text-white btn-md" (click)="OnClick(institute.Id,exam)">{{exam}}</button>
+                    <span *ngFor="let exam of institute.available">
+                        <button type="button" class="btn theme text-white btn-md" (click)="OnClick(institute._id,exam)">{{exam}}</button>
 
                     </span>
                 </div>

@@ -1,0 +1,10 @@
+.light{
+    background-color: rgba(231, 183, 183, 0.253);
+    font-weight: 500;
+}
+.click:hover{
+    cursor: pointer;
+    background-color: rgba(223, 230, 191, 0.247);
+    border-radius: 50%;
+
+}

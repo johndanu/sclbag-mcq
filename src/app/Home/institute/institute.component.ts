@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ConfigService } from 'src/app/config.service';
 import { QuizService } from 'src/app/Quiz/quiz.service';
 import { InstituteService } from '../institute.service';
 
@@ -11,18 +12,33 @@ import { InstituteService } from '../institute.service';
 })
 export class InstituteComponent implements OnInit {
 
+  public showLoader = true;
   public institutes;
-  constructor( private service_institute: InstituteService, 
-    private _quizService:QuizService,
-    private router:Router 
-    ) { }
+  constructor(private service_institute: InstituteService,
+    private _quizService: QuizService,
+    private router: Router, private configService: ConfigService
+  ) { }
 
   ngOnInit(): void {
-    this.institutes = this.service_institute.getInstitutes()
+    this.configService.getInstitutes()
+      .subscribe(data => {
+        this.institutes = data
+        this.showLoader = false
+      })
   }
 
-  OnClick(id,exam){
-    this._quizService.FilterQuiz(id,exam);
+
+  OnClick(id, exam) {
+
+    this._quizService.FilterQuiz(id, exam);
     this.router.navigate(['quiz'])
+  }
+
+  GetInstituteByID(id) {
+    let institute;
+    this.configService.getInstituteByID(id).subscribe(data => {
+      institute = data
+    });
+    return institute
   }
 }

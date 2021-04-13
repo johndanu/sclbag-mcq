@@ -8,7 +8,7 @@ import { ToastrService } from 'ngx-toastr';
 export class ResultService {
 public totalQuestions:number =0;
 public correctAnswers:number =0;
-public examAttended:boolean= true; //have to change it to false
+public examAttended:boolean= false; //have to change it to false
   constructor(private router:Router, private toastr:ToastrService) { }
 
   CheckAnswer(answer:number,correctanswer:number){

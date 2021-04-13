@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {  ToastrModule } from 'ngx-toastr';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,11 @@ import { ResultService } from './Quiz/result.service';
 import { InstituteComponent } from './Home/institute/institute.component';
 import { HomeComponent } from './Home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LandingPageComponent } from './Home/landing-page/landing-page.component';
+import { LoaderComponent } from './BasicComponents/loader/loader.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { SponsorsListComponent } from './Sponsors/sponsors-list/sponsors-list.component';
+import { SponsorsComponent } from './sponsors/sponsors.component';
 
 @NgModule({
   declarations: [
@@ -25,16 +31,22 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HomeComponent,
     QuizComponent,
     InstituteComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LandingPageComponent,
+    LoaderComponent,
+    ContactUsComponent,
+    SponsorsListComponent,
+    SponsorsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot()
   ],
   providers: [
-    //InstituteService,
+    InstituteService,
     QuizService,
     ResultService
   ],

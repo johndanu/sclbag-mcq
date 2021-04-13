@@ -1,27 +1,18 @@
 import { Injectable } from '@angular/core';
+import { ConfigService } from '../config.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class InstituteService {
-  InstitutesList = [
-    {
-      "Name":"Jaffna Zone",
-      "Id":"Zon12",
-      "About":"Jaffna zone in Nothern province.",
-      "Address": "Jaffna,Nothern, SriLanka",
-      "Exam":["Term1","Term2"]
-    },
-    {
-      "Name":"Kandy Zone",
-      "Id":"Zon11",
-      "About":"Kandy zone in Central province.",
-      "Address": "Jaffna,Nothern, SriLanka",
-      "Exam":["Term1","Term2","Misselenious"]
-    }
-  ]
-  constructor() { }
-  getInstitutes(){
-    return this.InstitutesList;
+  inst = []
+ 
+  constructor(private configService: ConfigService) {
+    configService.getInstitutes()
+      .subscribe(data => this.inst = data)
+      
+  }
+  getInstitutes() {
+    return this.inst;
   }
 }

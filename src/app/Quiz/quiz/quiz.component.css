@@ -1,7 +1,7 @@
 .answer{
     background-color: rgb(198, 220, 241);
     /* border-radius: 20px; */
-    color: rgb(2, 43, 56);
+    color: #360310;
     padding: 3px;
     margin: 3px;
     cursor: pointer;
@@ -9,12 +9,12 @@
     user-select:none;
 }
 .answer:hover{
-    color: rgb(198, 220, 241);
-    background-color: rgb(2, 43, 56);
+    color: #f18ba5;
+    background-color: #360511;
 }
 .answer:active{
-    color: rgb(4, 11, 119);
-    background-color: rgb(189, 168, 188);
+    color: #f5dfe4;
+    background-color: #272626;
 }
 .answer-check{
     width: 40px;
